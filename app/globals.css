@@ -1,26 +1,27 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-editorial-old: var(--editorial-old);
+  --font-editorial-sans: var(--editorial-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.card-invert {
+  max-width: 0;
+  transition: max-width 500ms;
+}
+.card:hover .card-invert {
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.ligatures {
+  font-feature-settings: "dlig" 1;
+  -moz-font-feature-settings: "dlig" 1;
+  -webkit-font-feature-settings: "dlig" 1;
 }

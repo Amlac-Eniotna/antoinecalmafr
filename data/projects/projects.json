@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Villa 'nduzienne",
+    "url": "https://villaanduze.fr/",
+    "technologie": ["HTML", "Sass", "Javascript"],
+    "date": "06/2024"
+  },
+  {
+    "title": "Responsive IMG",
+    "url": "https://responsive-img.antoinecalma.fr/",
+    "technologie": ["NextJS", "Redux", "Typescript"],
+    "date": "06/2024"
+  },
+  {
+    "title": "GBE Solution",
+    "url": "https://gbesolution.fr/",
+    "technologie": ["NextJS", "nodemailer", "Typescript"],
+    "date": "09/2024"
+  },
+  {
+    "title": "Maquette IzyCar",
+    "url": "https://www.figma.com/design/ikUBrKzSRAl4dn8Ai2hVIF/Izycar?node-id=0-1&t=bI64cyQVMFNY18Df-1",
+    "technologie": ["Affinity Design"],
+    "date": "10/2024"
+  },
+  {
+    "title": "Femmes en cévennes",
+    "url": "https://femmes-en-cevennes.fr/",
+    "technologie": ["NextJS", "next-auth"],
+    "date": "10/2024"
+  },
+  {
+    "title": "GBE Rénov'",
+    "url": "https://gberenov.fr/",
+    "technologie": ["NextJS", "nodemailer", "Typescript"],
+    "date": "11/2024"
+  },
+  {
+    "title": "MaisonSinistrée.fr",
+    "url": "https://maisonsinistree.fr/",
+    "technologie": ["NextJS", "nodemailer", "Typescript"],
+    "date": "12/2024"
+  },
+  {
+    "title": "Archikeo",
+    "url": "https://archikeo.fr/",
+    "technologie": ["NextJS", "nodemailer", "ClaudeAI"],
+    "date": "05/2025"
+  }
+]
