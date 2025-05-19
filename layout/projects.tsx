@@ -10,7 +10,7 @@ export const Projects = () => {
             return (
               <li
                 key={i}
-                className="card blur-scroll noise-effect relative flex size-full overflow-hidden rounded-xl border"
+                className="card relative flex size-full overflow-hidden rounded-xl border"
               >
                 <div className="absolute -z-10 size-full bg-white" />
                 <Link
