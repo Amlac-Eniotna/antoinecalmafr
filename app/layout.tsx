@@ -1,5 +1,6 @@
 import { editorialOld, editorialSans } from "@/fonts/fonts";
 import { Header } from "@/layout/header";
+import favicon from "@/public/favicon.ico";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -16,6 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
+      <head>
+        <link rel="shortcut icon" href={favicon.src} />
+      </head>
       <body
         className={`${editorialOld.variable} ${editorialSans.variable} font-editorial-sans font-extralight antialiased`}
       >
