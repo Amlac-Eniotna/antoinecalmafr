@@ -28,9 +28,7 @@ export const Projects = () => {
               key={i}
               layoutId={`project-${i}`}
               className="card relative flex size-full cursor-pointer overflow-hidden rounded-xl border"
-              onClick={() => openModal(i)}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              onClick={() => openModal(projects.length - 1 - i)}
             >
               <div className="absolute -z-10 size-full bg-white" />
               <motion.div
