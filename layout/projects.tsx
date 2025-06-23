@@ -7,29 +7,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-type Project = {
-  title: string;
-  url: string;
-  github?: string;
-  technologie: string[];
-  date: string;
-  image?: string;
-  description?: string;
-};
-
 export const Projects = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
-  const selectedProject =
-    selectedIndex !== null ? projects[selectedIndex] : null;
-
-  const openModal = (index: number) => {
-    setSelectedIndex(index);
-  };
-
-  const closeModal = () => {
-    setSelectedIndex(null);
-  };
+  const openModal = (index: number) => setSelectedIndex(index);
+  const closeModal = () => setSelectedIndex(null);
 
   const handleOverlayClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
@@ -37,61 +19,56 @@ export const Projects = () => {
     }
   };
 
-  // Copie du tableau pour éviter la mutation
-  const reversedProjects = [...projects].reverse();
-
   return (
     <section className="relative flex min-h-dvh w-full snap-start snap-always items-center justify-center px-4 sm:py-0">
       <div className="mt-24 mb-24 sm:mb-0">
         <ul className="m-auto grid max-w-3xl grid-cols-1 gap-2.5 sm:grid-cols-2 md:grid-cols-3">
-          {reversedProjects.map((project, i) => {
-            return (
-              <motion.li
-                key={i}
-                layoutId={`project-${i}`}
-                className="card relative flex size-full cursor-pointer overflow-hidden rounded-xl border"
-                onClick={() => openModal(i)}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+          {projects.toReversed().map((project, i) => (
+            <motion.li
+              key={i}
+              layoutId={`project-${i}`}
+              className="card relative flex size-full cursor-pointer overflow-hidden rounded-xl border"
+              onClick={() => openModal(i)}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <div className="absolute -z-10 size-full bg-white" />
+              <motion.div
+                className="relative size-full px-5 py-2.5"
+                layoutId={`project-content-${i}`}
               >
-                <div className="absolute -z-10 size-full bg-white" />
-                <motion.div
-                  className="relative size-full px-5 py-2.5"
-                  layoutId={`project-content-${i}`}
-                >
-                  <div className="relative -z-2">
-                    <motion.h3
-                      className="font-medium"
-                      layoutId={`project-title-${i}`}
-                    >
-                      {project.title}
-                    </motion.h3>
-                    <motion.p
-                      className="mb-1 text-xs"
-                      layoutId={`project-date-${i}`}
-                    >
-                      {project.date}
-                    </motion.p>
-                    <motion.ul
-                      className="list-inside list-disc text-xs"
-                      layoutId={`project-tech-${i}`}
-                    >
-                      {project.technologie.map((technologie, j) => (
-                        <li key={j}>{technologie}</li>
-                      ))}
-                    </motion.ul>
-                  </div>
-                </motion.div>
-                <div className="card-invert absolute top-0 left-0 -z-1 size-full backdrop-invert" />
-              </motion.li>
-            );
-          })}
+                <div className="relative -z-2">
+                  <motion.h3
+                    className="font-medium"
+                    layoutId={`project-title-${i}`}
+                  >
+                    {project.title}
+                  </motion.h3>
+                  <motion.p
+                    className="mb-1 text-xs"
+                    layoutId={`project-date-${i}`}
+                  >
+                    {project.date}
+                  </motion.p>
+                  <motion.ul
+                    className="list-inside list-disc text-xs"
+                    layoutId={`project-tech-${i}`}
+                  >
+                    {project.technologie.map((technologie, j) => (
+                      <li key={j}>{technologie}</li>
+                    ))}
+                  </motion.ul>
+                </div>
+              </motion.div>
+              <div className="card-invert absolute top-0 left-0 -z-1 size-full backdrop-invert" />
+            </motion.li>
+          ))}
         </ul>
       </div>
       <div className="absolute -bottom-8 m-auto h-16 w-[1px] bg-black sm:-bottom-16 sm:h-32"></div>
 
       <AnimatePresence>
-        {selectedProject && selectedIndex !== null && (
+        {selectedIndex !== null && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -114,7 +91,7 @@ export const Projects = () => {
                   <X className="h-4 w-4" />
                 </motion.button>
 
-                {selectedProject.image && (
+                {projects[selectedIndex].image && (
                   <motion.div
                     className="relative h-48 w-full overflow-hidden rounded-t-xl"
                     initial={{ opacity: 0, scale: 1.1 }}
@@ -122,8 +99,8 @@ export const Projects = () => {
                     transition={{ duration: 0.3 }}
                   >
                     <Image
-                      src={selectedProject.image}
-                      alt={selectedProject.title}
+                      src={projects[selectedIndex].image!}
+                      alt={projects[selectedIndex].title}
                       fill
                       className="object-cover object-top"
                       sizes="(max-width: 768px) 100vw, 448px"
@@ -139,13 +116,13 @@ export const Projects = () => {
                     className="text-2xl font-medium text-black"
                     layoutId={`project-title-${selectedIndex}`}
                   >
-                    {selectedProject.title}
+                    {projects[selectedIndex].title}
                   </motion.h2>
                   <motion.p
                     className="text-xs text-black"
                     layoutId={`project-date-${selectedIndex}`}
                   >
-                    {selectedProject.date}
+                    {projects[selectedIndex].date}
                   </motion.p>
                 </motion.div>
 
@@ -155,7 +132,7 @@ export const Projects = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 }}
                 >
-                  {selectedProject.description && (
+                  {projects[selectedIndex].description && (
                     <motion.div
                       className="mb-6"
                       initial={{ opacity: 0, y: 10 }}
@@ -166,7 +143,7 @@ export const Projects = () => {
                         Description:
                       </h4>
                       <p className="text-sm leading-relaxed text-black">
-                        {selectedProject.description}
+                        {projects[selectedIndex].description}
                       </p>
                     </motion.div>
                   )}
@@ -179,7 +156,7 @@ export const Projects = () => {
                       className="list-inside list-disc text-xs text-black"
                       layoutId={`project-tech-${selectedIndex}`}
                     >
-                      {selectedProject.technologie.map((tech, i) => (
+                      {projects[selectedIndex].technologie.map((tech, i) => (
                         <li key={i}>{tech}</li>
                       ))}
                     </motion.ul>
@@ -187,16 +164,16 @@ export const Projects = () => {
 
                   <div className="space-y-2">
                     <Link
-                      href={selectedProject.url}
+                      href={projects[selectedIndex].url}
                       target="_blank"
                       className="card group relative z-1 block w-full cursor-pointer overflow-hidden rounded-xl border px-4 py-2 text-center font-medium text-black"
                     >
                       <span className="relative -z-2">Voir le projet</span>
                       <div className="card-invert absolute top-0 left-0 -z-1 size-full backdrop-invert" />
                     </Link>
-                    {selectedProject.github && (
+                    {projects[selectedIndex].github && (
                       <Link
-                        href={selectedProject.github}
+                        href={projects[selectedIndex].github}
                         target="_blank"
                         className="card group relative z-1 block w-full cursor-pointer overflow-hidden rounded-xl border px-4 py-2 text-center font-medium text-black"
                       >
