@@ -3,48 +3,64 @@
     "title": "Villa 'nduzienne",
     "url": "https://villaanduze.fr/",
     "technologie": ["HTML", "Sass", "Javascript"],
-    "date": "06/2024"
+    "date": "06/2024",
+    "image": "/projects/villa-anduze.png",
+    "description": "Site vitrine pour une villa de vacances en Cévennes. Interface moderne et responsive avec système de réservation intégré."
   },
   {
     "title": "Responsive IMG",
     "url": "https://responsive-img.antoinecalma.fr/",
     "technologie": ["NextJS", "Redux", "Typescript"],
-    "date": "06/2024"
+    "date": "06/2024",
+    "image": "/projects/responsive-img.png",
+    "description": "Outil de génération d'images responsives avec gestion d'état Redux. Optimisation automatique pour différentes tailles d'écran."
   },
   {
     "title": "GBE Solution",
     "url": "https://gbesolution.fr/",
     "technologie": ["NextJS", "nodemailer", "Typescript"],
-    "date": "09/2024"
+    "date": "09/2024",
+    "image": "/projects/gbe-solution.png",
+    "description": "Site corporate pour une entreprise de solutions techniques. Design professionnel avec système de contact automatisé."
   },
   {
     "title": "Maquette IzyCar",
     "url": "https://www.figma.com/design/ikUBrKzSRAl4dn8Ai2hVIF/Izycar?node-id=0-1&t=bI64cyQVMFNY18Df-1",
     "technologie": ["Affinity Design"],
-    "date": "10/2024"
+    "date": "10/2024",
+    "image": "/projects/izycar-mockup.png",
+    "description": "Maquette UX/UI pour une application mobile de covoiturage. Design system complet avec prototypage interactif."
   },
   {
     "title": "Femmes en cévennes",
     "url": "https://femmes-en-cevennes.fr/",
     "technologie": ["NextJS", "next-auth"],
-    "date": "10/2024"
+    "date": "10/2024",
+    "image": "/projects/femmes-cevennes.png",
+    "description": "Plateforme communautaire avec authentification. Espace d'échange et de partage pour les femmes entrepreneures en région."
   },
   {
     "title": "GBE Rénov'",
     "url": "https://gberenov.fr/",
     "technologie": ["NextJS", "nodemailer", "Typescript"],
-    "date": "11/2024"
+    "date": "11/2024",
+    "image": "/projects/gbe-renov.png",
+    "description": "Site spécialisé en rénovation énergétique. Interface intuitive avec calculateur de devis et galerie de réalisations."
   },
   {
     "title": "MaisonSinistrée.fr",
     "url": "https://maisonsinistree.fr/",
     "technologie": ["NextJS", "nodemailer", "Typescript"],
-    "date": "12/2024"
+    "date": "12/2024",
+    "image": "/projects/maison-sinistree.png",
+    "description": "Plateforme d'assistance pour victimes de sinistres. Processus guidé et interface empathique pour accompagner les démarches."
   },
   {
     "title": "Archikeo",
     "url": "https://archikeo.fr/",
     "technologie": ["NextJS", "nodemailer", "ClaudeAI"],
-    "date": "05/2025"
+    "date": "05/2025",
+    "image": "/projects/archikeo.png",
+    "description": "Cabinet d'architecture moderne intégrant l'IA. Interface élégante avec assistant virtuel pour conseils architecturaux personnalisés."
   }
 ]
