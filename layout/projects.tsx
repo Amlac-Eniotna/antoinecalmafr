@@ -26,31 +26,31 @@ export const Projects = () => {
           {projects.toReversed().map((project, i) => (
             <motion.li
               key={i}
-              layoutId={`project-${i}`}
+              layoutId={`project-${projects.length - 1 - i}`}
               className="card relative flex size-full cursor-pointer overflow-hidden rounded-xl border"
               onClick={() => openModal(projects.length - 1 - i)}
             >
               <div className="absolute -z-10 size-full bg-white" />
               <motion.div
                 className="relative size-full px-5 py-2.5"
-                layoutId={`project-content-${i}`}
+                layoutId={`project-content-${projects.length - 1 - i}`}
               >
                 <div className="relative -z-2">
                   <motion.h3
                     className="font-medium"
-                    layoutId={`project-title-${i}`}
+                    layoutId={`project-title-${projects.length - 1 - i}`}
                   >
                     {project.title}
                   </motion.h3>
                   <motion.p
                     className="mb-1 text-xs"
-                    layoutId={`project-date-${i}`}
+                    layoutId={`project-date-${projects.length - 1 - i}`}
                   >
                     {project.date}
                   </motion.p>
                   <motion.ul
                     className="list-inside list-disc text-xs"
-                    layoutId={`project-tech-${i}`}
+                    layoutId={`project-tech-${projects.length - 1 - i}`}
                   >
                     {project.technologie.map((technologie, j) => (
                       <li key={j}>{technologie}</li>
