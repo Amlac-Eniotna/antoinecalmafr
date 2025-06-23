@@ -39,15 +39,13 @@ export const Projects = () => {
     <section className="relative flex min-h-dvh w-full snap-start snap-always items-center justify-center px-4 sm:py-0">
       <div className="mt-24 mb-24 sm:mb-0">
         <ul className="m-auto grid max-w-3xl grid-cols-1 gap-2.5 sm:grid-cols-2 md:grid-cols-3">
-          {projects.reverse().map((project, i) => {
+          {[...projects].reverse().map((project, i) => {
             return (
               <motion.li
                 key={i}
                 layoutId={`project-${i}`}
                 className="card relative flex size-full cursor-pointer overflow-hidden rounded-xl border"
                 onClick={() => openModal(project, i)}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
               >
                 <div className="absolute -z-10 size-full bg-white" />
                 <motion.div
@@ -104,7 +102,7 @@ export const Projects = () => {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.2 }}
                   onClick={closeModal}
-                  className="card absolute top-4 right-4 z-10 cursor-pointer overflow-hidden rounded-xl border border-black bg-white text-black hover:text-gray-600"
+                  className="card absolute top-4 right-4 z-10 cursor-pointer overflow-hidden rounded-xl border border-black bg-white text-black transition-colors hover:bg-black hover:text-white"
                 >
                   <svg
                     className="h-6 w-6"
@@ -119,7 +117,6 @@ export const Projects = () => {
                       d="M6 18L18 6M6 6l12 12"
                     />
                   </svg>
-                  <div className="card-invert absolute top-0 left-0 -z-1 size-full backdrop-invert" />
                 </motion.button>
 
                 {selectedProject.image && (
