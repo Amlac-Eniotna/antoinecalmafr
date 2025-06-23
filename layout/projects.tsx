@@ -2,6 +2,7 @@
 
 import projects from "@/data/projects/projects.json";
 import { AnimatePresence, motion } from "framer-motion";
+import { X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -9,6 +10,7 @@ import { useState } from "react";
 type Project = {
   title: string;
   url: string;
+  github?: string;
   technologie: string[];
   date: string;
   image?: string;
@@ -16,16 +18,16 @@ type Project = {
 };
 
 export const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
-  const openModal = (project: Project, index: number) => {
-    setSelectedProject(project);
+  const selectedProject =
+    selectedIndex !== null ? projects[selectedIndex] : null;
+
+  const openModal = (index: number) => {
     setSelectedIndex(index);
   };
 
   const closeModal = () => {
-    setSelectedProject(null);
     setSelectedIndex(null);
   };
 
@@ -35,17 +37,22 @@ export const Projects = () => {
     }
   };
 
+  // Copie du tableau pour éviter la mutation
+  const reversedProjects = [...projects].reverse();
+
   return (
     <section className="relative flex min-h-dvh w-full snap-start snap-always items-center justify-center px-4 sm:py-0">
       <div className="mt-24 mb-24 sm:mb-0">
         <ul className="m-auto grid max-w-3xl grid-cols-1 gap-2.5 sm:grid-cols-2 md:grid-cols-3">
-          {[...projects].reverse().map((project, i) => {
+          {reversedProjects.map((project, i) => {
             return (
               <motion.li
                 key={i}
                 layoutId={`project-${i}`}
                 className="card relative flex size-full cursor-pointer overflow-hidden rounded-xl border"
-                onClick={() => openModal(project, i)}
+                onClick={() => openModal(i)}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
               >
                 <div className="absolute -z-10 size-full bg-white" />
                 <motion.div
@@ -102,21 +109,9 @@ export const Projects = () => {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.2 }}
                   onClick={closeModal}
-                  className="card absolute top-4 right-4 z-10 cursor-pointer overflow-hidden rounded-xl border border-black bg-white text-black transition-colors hover:bg-black hover:text-white"
+                  className="absolute top-4 right-4 z-10 cursor-pointer rounded-xl border border-black bg-white p-2 text-black transition-colors hover:bg-black hover:text-white"
                 >
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
+                  <X className="h-4 w-4" />
                 </motion.button>
 
                 {selectedProject.image && (
@@ -190,31 +185,26 @@ export const Projects = () => {
                     </motion.ul>
                   </div>
 
-                  <motion.div
-                    className="space-y-2"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2 }}
-                  >
+                  <div className="space-y-2">
                     <Link
                       href={selectedProject.url}
                       target="_blank"
-                      className="card relative z-1 block w-full cursor-pointer overflow-hidden rounded-xl border px-4 py-2 text-center font-medium text-black"
+                      className="card group relative z-1 block w-full cursor-pointer overflow-hidden rounded-xl border px-4 py-2 text-center font-medium text-black"
                     >
                       <span className="relative -z-2">Voir le projet</span>
                       <div className="card-invert absolute top-0 left-0 -z-1 size-full backdrop-invert" />
                     </Link>
-                    {selectedProject.url.includes("github.com") ? null : (
+                    {selectedProject.github && (
                       <Link
-                        href="#"
+                        href={selectedProject.github}
                         target="_blank"
-                        className="card relative z-1 block w-full cursor-pointer overflow-hidden rounded-xl border px-4 py-2 text-center font-medium text-black"
+                        className="card group relative z-1 block w-full cursor-pointer overflow-hidden rounded-xl border px-4 py-2 text-center font-medium text-black"
                       >
                         <span className="relative -z-2">GitHub</span>
                         <div className="card-invert absolute top-0 left-0 -z-1 size-full backdrop-invert" />
                       </Link>
                     )}
-                  </motion.div>
+                  </div>
                 </motion.div>
               </div>
             </motion.div>
