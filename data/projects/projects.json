@@ -6,7 +6,7 @@
     "technologie": ["HTML", "Sass", "Javascript"],
     "date": "06/2024",
     "image": "/projects/villa-anduze.png",
-    "description": "Site vitrine pour une villa de vacances en Cévennes. Interface moderne et responsive avec système de réservation intégré."
+    "description": "Site vitrine pour une villa de vacances en Cévennes, entièrement développé en HTML, JavaScript et Sass. Interface moderne et responsive construite de zéro avec du CSS préprocessé et des interactions JavaScript natives. Avec le recul, j'opterais aujourd'hui pour un framework comme NextJS afin d'optimiser ma productivité et de générer directement un site statique."
   },
   {
     "title": "Responsive IMG",
@@ -15,7 +15,7 @@
     "technologie": ["NextJS", "Redux", "Typescript"],
     "date": "06/2024",
     "image": "/projects/responsive-img.png",
-    "description": "Outil de génération d'images responsives avec gestion d'état Redux. Optimisation automatique pour différentes tailles d'écran."
+    "description": "Outil de génération d'images optimisées au format WebP à différentes échelles pour le responsive. Interface intuitive développée avec NextJS, Redux et TypeScript. Génération automatique de multiples résolutions à partir d'une image source. Note : il y a un manque d'optimisation lors du traitement de nombreuses images haute résolution car je n'ai pas utilisé de solution de mise en cache lors de la génération des images."
   },
   {
     "title": "GBE Solution",
@@ -24,7 +24,7 @@
     "technologie": ["NextJS", "nodemailer", "Typescript"],
     "date": "09/2024",
     "image": "/projects/gbe-solution.png",
-    "description": "Site corporate pour une entreprise de solutions techniques. Design professionnel avec système de contact automatisé."
+    "description": "Site corporate développé avec NextJS pour une entreprise de solutions techniques. Animations fluides avec framer-motion et formulaire de contact intelligent avec envoi automatique d'emails via nodemailer. Développement assisté par IA pour optimiser l'architecture et l'expérience utilisateur."
   },
   {
     "title": "Maquette IzyCar",
@@ -32,16 +32,16 @@
     "technologie": ["Affinity Design"],
     "date": "10/2024",
     "image": "/projects/izycar-mockup.png",
-    "description": "Maquette UX/UI pour une application mobile de covoiturage. Design system complet avec prototypage interactif."
+    "description": "Maquette UX/UI complète pour une application mobile de location de voiture. Design system cohérent réalisé avec Affinity Designer. Avec le recul, j'opterais pour Figma afin de bénéficier d'outils de prototypage interactif plus adaptés au design d'interfaces."
   },
   {
     "title": "Femmes en cévennes",
     "url": "https://femmes-en-cevennes.fr/",
     "github": "https://github.com/antoinecalmafr/femmes-en-cevennes",
-    "technologie": ["NextJS", "next-auth"],
+    "technologie": ["NextJS", "NextAuth"],
     "date": "10/2024",
     "image": "/projects/femmes-cevennes.png",
-    "description": "Plateforme communautaire avec authentification. Espace d'échange et de partage pour les femmes entrepreneures en région."
+    "description": "Plateforme communautaire développée bénévolement pour une association locale. Cette solution permet aux responsables de créer facilement des annonces visuelles en ligne, offrant une alternative autonome aux plateformes de messagerie traditionnelles. Intègre un système d'authentification sécurisé via NextAuth, permettant une gestion de contenu intuitive : les responsables peuvent publier des annonces et les membres consulter les informations de manière indépendante."
   },
   {
     "title": "GBE Rénov'",
@@ -50,7 +50,7 @@
     "technologie": ["NextJS", "nodemailer", "Typescript"],
     "date": "11/2024",
     "image": "/projects/gbe-renov.png",
-    "description": "Site spécialisé en rénovation énergétique. Interface intuitive avec calculateur de devis et galerie de réalisations."
+    "description": "Site vitrine professionnel pour une entreprise de rénovation et petits travaux en Essonne. Interface moderne avec un blog optimisé SEO pour améliorer la visibilité locale."
   },
   {
     "title": "MaisonSinistrée.fr",
@@ -59,7 +59,7 @@
     "technologie": ["NextJS", "nodemailer", "Typescript"],
     "date": "12/2024",
     "image": "/projects/maison-sinistree.png",
-    "description": "Plateforme d'assistance pour victimes de sinistres. Processus guidé et interface empathique pour accompagner les démarches."
+    "description": "Site d'une société spécialisée dans le rachat de biens immobiliers pour les victimes de sinistres non indemnisées. Interface optimisée pour présenter les services de rachat rapide avec processus d'évaluation en ligne. Approche UX empathique développée à partir de wireframes puis maquette détaillée pour accompagner les propriétaires en difficulté."
   },
   {
     "title": "Archikeo",
@@ -68,6 +68,6 @@
     "technologie": ["NextJS", "nodemailer", "ClaudeAI"],
     "date": "05/2025",
     "image": "/projects/archikeo.png",
-    "description": "Cabinet d'architecture moderne intégrant l'IA. Interface élégante avec assistant virtuel pour conseils architecturaux personnalisés."
+    "description": "Archikeo, cabinet d’expertise d’assurés dédié à la défense des victimes face aux assurances. Développé avec Next.js et un formulaire NodeMailer, il allie performance, sécurité et fiabilité au service de ses clients."
   }
 ]
