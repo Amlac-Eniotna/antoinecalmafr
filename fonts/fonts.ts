@@ -54,6 +54,8 @@ export const editorialOld = localFont({
     },
   ],
   variable: "--editorial-old",
+  display: "swap",
+  preload: true,
 });
 
 export const editorialSans = localFont({
@@ -110,4 +112,6 @@ export const editorialSans = localFont({
     },
   ],
   variable: "--editorial-sans",
+  display: "swap",
+  preload: true,
 });
