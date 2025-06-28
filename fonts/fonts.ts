@@ -132,8 +132,7 @@ export const editorialSans = localFont({
   ],
   variable: "--editorial-sans",
   display: "swap", // ✅ Déjà optimal
-  preload: true,
-  fallback: ["system-ui", "-apple-system", "sans-serif"], // ✅ Fallback système
+  preload: false,
 });
 
 export const editorialOld = localFont({
@@ -151,6 +150,5 @@ export const editorialOld = localFont({
   ],
   variable: "--editorial-old",
   display: "swap",
-  preload: true,
-  fallback: ["Georgia", "serif"], // ✅ Fallback système
+  preload: false,
 });
