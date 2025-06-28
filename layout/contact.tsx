@@ -53,7 +53,10 @@ export const Contact = () => {
       className="relative flex min-h-dvh w-full snap-start snap-always flex-col items-center justify-center px-4"
     >
       <div className="mb-6 grid w-full max-w-md grid-cols-3">
-        <h2 className="col-start-2 m-auto border-b text-center text-xl font-medium text-gray-800">
+        <h2
+          id="contact-heading"
+          className="col-start-2 m-auto border-b text-center text-xl font-medium text-gray-800"
+        >
           Contact
         </h2>
         <div className="flex w-fit gap-1.5 justify-self-end border-t border-b p-1">

@@ -23,6 +23,9 @@ export const Projects = () => {
 
   return (
     <section className="relative flex min-h-dvh w-full snap-start snap-always items-center justify-center px-4 sm:py-0">
+      <h2 id="projects-heading" className="sr-only">
+        Mes Projets
+      </h2>
       <div className="mt-24 mb-24 sm:mb-0">
         <ul className="m-auto grid max-w-3xl grid-cols-1 gap-2.5 sm:grid-cols-2 md:grid-cols-3">
           {reversedProjects.map((project, i) => (

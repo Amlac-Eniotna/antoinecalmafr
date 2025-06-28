@@ -8,9 +8,9 @@ export const Header = () => {
         <h1 className="text-2xl whitespace-nowrap sm:text-3xl">
           Antoine Calma
         </h1>
-        <h1 className="text-xs whitespace-nowrap sm:text-xl">
+        <h2 className="text-xs whitespace-nowrap sm:text-xl">
           Développeur NextJS / UX Designer
-        </h1>
+        </h2>
         <div className="absolute top-0 flex size-full items-end-safe justify-end-safe pr-5">
           {/* <a className="flex cursor-pointer flex-col items-center justify-center p-2">
             <BookOpenText />
