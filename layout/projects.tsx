@@ -81,7 +81,7 @@ export const Projects = () => {
           >
             <motion.div
               layoutId={`project-${selectedIndex}`}
-              className="max-h-[90vh] w-full max-w-md overflow-y-auto rounded-xl border bg-white"
+              className="max-h-[90svh] w-full max-w-md overflow-y-auto rounded-xl border bg-white"
             >
               <div className="relative">
                 <motion.button

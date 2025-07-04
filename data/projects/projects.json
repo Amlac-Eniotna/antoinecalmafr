@@ -2,7 +2,7 @@
   {
     "title": "Villa 'nduzienne",
     "url": "https://villaanduze.fr/",
-    "github": "https://github.com/antoinecalmafr/villa-anduze",
+    "github": "https://github.com/Amlac-Eniotna/villaanduze",
     "technologie": ["HTML", "Sass", "Javascript"],
     "date": "06/2024",
     "image": "/projects/villa-anduze.png",
@@ -11,7 +11,7 @@
   {
     "title": "Responsive IMG",
     "url": "https://responsive-img.antoinecalma.fr/",
-    "github": "https://github.com/antoinecalmafr/responsive-img",
+    "github": "https://github.com/Amlac-Eniotna/responsive_img",
     "technologie": ["NextJS", "Redux", "Typescript"],
     "date": "06/2024",
     "image": "/projects/responsive-img.png",
@@ -20,7 +20,6 @@
   {
     "title": "GBE Solution",
     "url": "https://gbesolution.fr/",
-    "github": "https://github.com/antoinecalmafr/gbe-solution",
     "technologie": ["NextJS", "nodemailer", "Typescript"],
     "date": "09/2024",
     "image": "/projects/gbe-solution.png",
@@ -37,7 +36,7 @@
   {
     "title": "Femmes en cévennes",
     "url": "https://femmes-en-cevennes.fr/",
-    "github": "https://github.com/antoinecalmafr/femmes-en-cevennes",
+    "github": "https://github.com/Amlac-Eniotna/femmes_en_cevennes",
     "technologie": ["NextJS", "NextAuth"],
     "date": "10/2024",
     "image": "/projects/femmes-cevennes.png",
@@ -46,7 +45,6 @@
   {
     "title": "GBE Rénov'",
     "url": "https://gberenov.fr/",
-    "github": "https://github.com/antoinecalmafr/gbe-renov",
     "technologie": ["NextJS", "nodemailer", "Typescript"],
     "date": "11/2024",
     "image": "/projects/gbe-renov.png",
@@ -55,7 +53,6 @@
   {
     "title": "MaisonSinistrée.fr",
     "url": "https://maisonsinistree.fr/",
-    "github": "https://github.com/antoinecalmafr/maison-sinistree",
     "technologie": ["NextJS", "nodemailer", "Typescript"],
     "date": "12/2024",
     "image": "/projects/maison-sinistree.png",
@@ -64,7 +61,6 @@
   {
     "title": "Archikeo",
     "url": "https://archikeo.fr/",
-    "github": "https://github.com/antoinecalmafr/archikeo",
     "technologie": ["NextJS", "nodemailer", "ClaudeAI"],
     "date": "05/2025",
     "image": "/projects/archikeo.png",
