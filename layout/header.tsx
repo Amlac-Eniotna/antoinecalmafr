@@ -1,4 +1,4 @@
-import { FileUser, NotebookTabs } from "lucide-react";
+import { BookOpenText, NotebookTabs } from "lucide-react";
 import Link from "next/link";
 
 export const Header = () => {
@@ -12,24 +12,19 @@ export const Header = () => {
           Développeur NextJS / UX Designer
         </h2>
         <div className="absolute top-0 flex size-full items-end-safe justify-end-safe pr-5">
-          {/* <a className="flex cursor-pointer flex-col items-center justify-center p-2">
+          <Link
+            href={"https://blog.antoinecalma.fr/"}
+            className="flex cursor-pointer flex-col items-center justify-center p-2"
+          >
             <BookOpenText />
             <span className="text-center text-[10px]">Blog</span>
-          </a> */}
+          </Link>
           <Link
             href="#contact"
             className="flex cursor-pointer flex-col items-center justify-center p-2"
           >
             <NotebookTabs />
             <span className="text-center text-[10px]">Contact</span>
-          </Link>
-          <Link
-            href="/CV_UX_Design.pdf"
-            target="_blank"
-            className="flex cursor-pointer flex-col items-center justify-center p-2"
-          >
-            <FileUser />
-            <span className="text-center text-[10px]">Curriculum</span>
           </Link>
         </div>
       </div>
