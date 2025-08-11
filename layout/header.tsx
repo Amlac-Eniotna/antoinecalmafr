@@ -12,15 +12,19 @@ export const Header = () => {
           Développeur NextJS / UX Designer
         </h2>
         <div className="absolute top-0 flex size-full items-end-safe justify-end-safe pr-5">
-          <Link
-            href={"https://blog.antoinecalma.fr/"}
+          {/* <Link
+            href={"/blog"}
             className="flex cursor-pointer flex-col items-center justify-center p-2"
           >
             <BookOpenText />
             <span className="text-center text-[10px]">Blog</span>
-          </Link>
+          </Link> */}
+          <p className="flex cursor-pointer flex-col items-center justify-center p-2 text-neutral-400">
+            <BookOpenText />
+            <span className="text-center text-[10px]">Blog</span>
+          </p>
           <Link
-            href="#contact"
+            href="/#contact"
             className="flex cursor-pointer flex-col items-center justify-center p-2"
           >
             <NotebookTabs />
