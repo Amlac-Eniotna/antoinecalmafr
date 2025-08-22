@@ -59,14 +59,6 @@
     "description": "Site d'une société spécialisée dans le rachat de biens immobiliers pour les victimes de sinistres non indemnisées. Interface optimisée pour présenter les services de rachat rapide avec processus d'évaluation en ligne. Approche UX empathique développée à partir de wireframes puis maquette détaillée pour accompagner les propriétaires en difficulté."
   },
   {
-    "title": "Archikeo",
-    "url": "https://archikeo.fr/",
-    "technologie": ["NextJS", "nodemailer", "ClaudeAI"],
-    "date": "05/2025",
-    "image": "/projects/archikeo.png",
-    "description": "Site web d'un cabinet d'expertise d'assurés spécialisé dans la défense des victimes face aux assurances. Contribution au développement de certaines fonctionnalités avec Next.js et intégration d'un formulaire de contact via NodeMailer."
-  },
-  {
     "title": "QuiRamèneQuoi",
     "url": "https://qui-ramene-quoi.fr/",
     "github": "https://github.com/Amlac-Eniotna/whobringwhat",
