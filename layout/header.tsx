@@ -19,7 +19,7 @@ export const Header = () => {
             <BookOpenText />
             <span className="text-center text-[10px]">Blog</span>
           </Link> */}
-          <p className="flex cursor-pointer flex-col items-center justify-center p-2 text-neutral-400">
+          <p className="flex flex-col items-center justify-center p-2 text-neutral-400">
             <BookOpenText />
             <span className="text-center text-[10px]">Blog</span>
           </p>
