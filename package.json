@@ -12,9 +12,10 @@
     "@types/nodemailer": "^6.4.17",
     "framer-motion": "^12.19.1",
     "lucide-react": "^0.511.0",
-    "next": "15.3.6",
+    "next": "^16.0.10",
+    "nextjs": "^0.0.3",
     "nodemailer": "^7.0.3",
-    "react": "^19.0.0",
+    "react": "^19.2.3",
     "react-dom": "^19.0.0",
     "zod": "^3.25.1"
   },
